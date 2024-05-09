@@ -34,7 +34,7 @@ resource controlplanemanagedIdentity 'Microsoft.ManagedIdentity/userAssignedIden
 
 //f1a07417-d97a-45cb-824c-7a7467783830 - Managed Identity Operator
 var managedIDentityOperatorRole = 'f1a07417-d97a-45cb-824c-7a7467783830'
-resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssignments@2022-09-02-preview' = {
+resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
   name: guid(managedIDentityOperatorRole, managedIdentityName, controlplanemanagedIdentity.name)
   scope: managedIdentity
   properties: {
