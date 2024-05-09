@@ -23,7 +23,7 @@ param logAnalyticId string = ''
 @description('Managed identity name')
 param managedIdentityName string
 
-resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2022-01-31-preview' existing = {
+resource managedIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2024-04-01' existing = {
   name: managedIdentityName
 }
 
