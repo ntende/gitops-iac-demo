@@ -34,7 +34,7 @@ resource controlplanemanagedIdentity 'Microsoft.ManagedIdentity/userAssignedIden
 
 //f1a07417-d97a-45cb-824c-7a7467783830 - Managed Identity Operator
 var managedIDentityOperatorRole = 'f1a07417-d97a-45cb-824c-7a7467783830'
-resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssignments@2022-09-02-preview' = {
   name: guid(managedIDentityOperatorRole, managedIdentityName, controlplanemanagedIdentity.name)
   scope: managedIdentity
   properties: {
@@ -44,7 +44,7 @@ resource  managedIDentityOperatorRAssignment 'Microsoft.Authorization/roleAssign
   }
 }
 
-resource akscluster 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
+resource akscluster 'Microsoft.ContainerService/managedClusters@2024-03-02-preview' = {
   name: clusterName
   location: location  
   identity: {
