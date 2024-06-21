@@ -1,6 +1,6 @@
 name: IaC Deployment
 env:  
-  PREFIX: ypopsdemo
+  PREFIX: oceanzhubMVP
   REGION: westeurope
   CHECKS: CKV_AZURE_5
 # Controls when the action will run. 
